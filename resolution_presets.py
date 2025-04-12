@@ -20,6 +20,10 @@ class ResolutionPresetsSDXL:
     NODE_DISPLAY_NAME = "Resolution Presets (SDXL)"
     CATEGORY = "utils/presets"
     
+    # 出力の定義
+    RETURN_TYPES = ("INT", "INT")
+    RETURN_NAMES = ("width", "height")
+    
     @classmethod
     def INPUT_TYPES(cls):
         """入力タイプの定義
