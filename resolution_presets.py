@@ -24,6 +24,9 @@ class ResolutionPresetsSDXL:
     RETURN_TYPES = ("INT", "INT")
     RETURN_NAMES = ("width", "height")
     
+    # 処理関数の指定
+    FUNCTION = "get_resolution"
+    
     @classmethod
     def INPUT_TYPES(cls):
         """入力タイプの定義
@@ -36,3 +39,31 @@ class ResolutionPresetsSDXL:
                 "preset": (SDXL_RESOLUTIONS,)
             }
         }
+    
+    def get_resolution(self, preset: str) -> tuple[int, int]:
+        """プリセット文字列から解像度を抽出する
+        
+        Args:
+            preset (str): 解像度プリセット文字列 (e.g., "1024x1024 (1:1)")
+        
+        Returns:
+            tuple[int, int]: 幅と高さのタプル (width, height)
+        """
+        try:
+            # プリセット文字列から解像度部分を抽出
+            resolution = preset.split(" ")[0]
+            
+            # 幅と高さを分割して取得
+            width_str, height_str = resolution.split("x")
+            
+            # 整数に変換
+            width = int(width_str)
+            height = int(height_str)
+            
+            return (width, height)
+            
+        except Exception as e:
+            # エラー発生時の処理
+            print(f"[ResolutionPresetsSDXL] Error parsing preset: {preset}. Error: {e}")
+            print("[ResolutionPresetsSDXL] Returning default 1024x1024.")
+            return (1024, 1024)
