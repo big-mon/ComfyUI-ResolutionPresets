@@ -10,3 +10,12 @@ SDXL_RESOLUTIONS = [
     "1536x640 (12:5)",   # パノラマ横長
     "640x1536 (5:12)",   # パノラマ縦長
 ]
+
+
+class ResolutionPresetsSDXL:
+    """SDXL推奨解像度のプリセットを提供するノード"""
+    
+    # ノードの基本情報
+    NODE_NAME = "ResolutionPresetsSDXL"
+    NODE_DISPLAY_NAME = "Resolution Presets (SDXL)"
+    CATEGORY = "utils/presets"
