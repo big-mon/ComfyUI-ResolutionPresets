@@ -1,32 +1,27 @@
 # ComfyUI Resolution Presets
 
-ComfyUI用のSDXL推奨解像度プリセットノード。
+![](image.jpg)
+
+ComfyUI 用の SDXL 推奨解像度プリセットノード。
 
 ## 機能
 
-- SDXL推奨解像度をドロップダウンリストから簡単に選択可能
+- SDXL 推奨解像度をドロップダウンリストから簡単に選択可能
 - 選択した解像度の幅と高さを `width` と `height` として出力
 - `Empty Latent Image` ノードなどと組み合わせて使用可能
 
 ## インストール
 
-1. ComfyUIの `custom_nodes` ディレクトリに移動
-2. 以下のいずれかの方法でインストール:
-
 ```bash
-# Gitを使用する場合
-git clone https://github.com/big-mon/ComfyUI-ResolutionPresets.git
+cd .\custom_nodes
+git clone --depth 1 https://github.com/big-mon/ComfyUI-ResolutionPresets.git
 
-# 手動でダウンロードする場合
-# 1. このリポジトリをZIPでダウンロード
-# 2. custom_nodesディレクトリに解凍
+# Restart ComfyUI
 ```
-
-3. ComfyUIを再起動
 
 ## 使用方法
 
-1. ComfyUIのノード追加メニューから `Resolution Presets (SDXL)` を検索
+1. ComfyUI のノード追加メニューから `Resolution Presets (SDXL)` を検索
 2. ノードをワークフローに追加
 3. ドロップダウンから希望の解像度を選択
 4. `width` と `height` の出力を `Empty Latent Image` ノードなどに接続
