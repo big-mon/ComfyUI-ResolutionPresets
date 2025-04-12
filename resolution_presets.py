@@ -19,3 +19,16 @@ class ResolutionPresetsSDXL:
     NODE_NAME = "ResolutionPresetsSDXL"
     NODE_DISPLAY_NAME = "Resolution Presets (SDXL)"
     CATEGORY = "utils/presets"
+    
+    @classmethod
+    def INPUT_TYPES(cls):
+        """入力タイプの定義
+        
+        Returns:
+            dict: 必須入力としてSDXL_RESOLUTIONSリストから選択可能なpresetを定義
+        """
+        return {
+            "required": {
+                "preset": (SDXL_RESOLUTIONS,)
+            }
+        }
