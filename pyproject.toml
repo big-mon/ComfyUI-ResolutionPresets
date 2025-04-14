@@ -1,0 +1,14 @@
+[project]
+name = "resolutionpresets"
+description = "Provides recommended resolution presets specifically. Select a preset from the dropdown to easily output the corresponding width and height values for use with nodes like Empty Latent Image."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/big-mon/ComfyUI-ResolutionPresets"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-ResolutionPresets"
+Icon = ""
